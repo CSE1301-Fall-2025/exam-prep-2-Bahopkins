@@ -13,11 +13,15 @@ public class Q02 {
 	*
 	**/
 	public static void dashedLine(double x) {
-		
+		double y = 0;
+		double k = 0.02;
+		while (y <= 1) {
+			StdDraw.line(x, y, x, y + k);
+			y += (2*k);
+		}
 	}
 
 	public static void main(String[] args) {
 		dashedLine(0.25);
 	}
-
 }

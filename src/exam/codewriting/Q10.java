@@ -16,7 +16,11 @@ public class Q10 {
 	Complete the method. You may use either iteration or recursion.
 	 */
 	public static int repeat (String text, int n) {
-		return 0; //fix me
+		for (int k = 1; k <= n; k++) {
+			System.out.print(text);
+		}
+		System.out.println();
+		return 0;
 	}
 
 	public static void main ( String[] args ) {

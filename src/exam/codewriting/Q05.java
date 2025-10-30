@@ -18,13 +18,27 @@ public class Q05 {
 	appropriately. It is not necessary to use recursion for this problem. Complete the method below:
 	*/
 	public static int countValue (int[] a, int findMe ) {
-		return 0; //fix me
+		if (a.length == 0) {
+			return 0;
+		}
+		else {
+			return countValueHelper(a, findMe, 0, 0);
+		}
 	}
 
+	public static int countValueHelper(int[] a, int findMe, int i, int count) {
+		if (i == a.length) {
+			return count;
+		}
+		if (a[i] == findMe) {
+			count++;
+		}
+		return countValueHelper(a, findMe, i + 1, count);
+	}
 
 	public static void main ( String[] args ) {
 		int[] a = {1, 3, 1};
-		System.out.println(countValue(a, 1));
+		System.out.println(countValue(a, 9));
 	}
 
 }
